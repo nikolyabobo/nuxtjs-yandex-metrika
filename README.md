@@ -55,6 +55,21 @@ modules: [
 YM_ID=XXXXXXX
 ```
 
+Добавлены переменные в настройки модуля для альтернативного расположения скрипта
+```code
+modules: [
+    [
+      '@rkaliev/nuxtjs-yandex-metrika',
+      {
+        ...
+        useCustomUrl: true,
+        customUrl: 'https://some.url/path/to/tag.js'
+        ...
+      },
+    ],
+  ],
+```
+
 Модуль/Плагин можно запускать в режиме debug, используется mock Yandex.Metrika(Яндекс.Метрика) и происходит вывод в консоль ивентов и параметров:
 
 ```code
